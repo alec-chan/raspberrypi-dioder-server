@@ -23,7 +23,16 @@ function requestSettings(){
     return xhr.onreadystatechange();
 }
 function togglecolor(val){
-    colorcontrol.disabled=val;
+    if(val){
+        if(!colorcontrol.classList.contains("hidden")){
+            colorcontrol.classList.add("hidden");
+        }
+    }
+    else{
+        if(colorcontrol.classList.contains("hidden")){
+            colorcontrol.classList.remove("hidden");
+        }
+    }
 }
 function setSettings(resp){
     colorcontrol.jscolor.fromString(resp.color);
