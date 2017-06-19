@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="jscolor.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        Color: <input id="color" class="jscolor" onchange="update(this.jscolor)" value="ffffff">
+        <br/>
+        Off: 
+        <label class="switch">
+        <input id="off" type="checkbox" onclick='toggleOff(this);' >
+        <div class="slider round"></div>
+        </label>
+        <br/>
+        <input type="button">Send</input>
+    </body>
+</html>
