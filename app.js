@@ -6,6 +6,7 @@ var Redoid = require('redoid');
 var redoid = Redoid({
     color: '#ffffff'
 });
+var secretkey="aGVsbG8gd29ybGQ=";
 var off=false;
 app.use( express.static( __dirname + '/Public' ));
 app.use( bodyParser.json() );
@@ -24,17 +25,20 @@ app.get('/status', function(req, res){
 });
 
 app.post('/submit', function(req, res) {
-    console.log(req.body);
-    if(req.body.off){
-        redoid.turnOff();
-        off=true;
-    }
-    else
-    {
-        if(req.body.color){
-            if(redoid.isColorValid(req.body.color)){
-                redoid.transition(req.body.color, 1500);
-                off=false;
+    if(req.body.secretkey===secretkey){
+        console.log(req.body);
+        
+        if(req.body.off){
+            redoid.turnOff();
+            off=true;
+        }
+        else
+        {
+            if(req.body.color){
+                if(redoid.isColorValid(req.body.color)){
+                    redoid.transition(req.body.color, 1500);
+                    off=false;
+                }
             }
         }
     }
