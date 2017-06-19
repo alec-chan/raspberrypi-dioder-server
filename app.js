@@ -21,8 +21,7 @@ app.get('/status', function(req, res){
 });
 
 app.post('/submit', function(req, res) {
-    var name = req.body.name,
-        color = req.body.color;
+    console.log(req.body);
     if(req.body.off){
         redoid.turnOff();
         off=true;

@@ -4,6 +4,10 @@ var off=true;
 var colorcontrol = document.getElementById("color");
 var offcontrol = document.getElementById("off");
 
+window.onload=function(){
+    requestSettings();
+};
+
 function requestSettings(){
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange=function(){
@@ -36,4 +40,5 @@ function submit(){
     xmlhttp.open("POST", "/submit");
     xmlhttp.setRequestHeader("Content-Type", "application/json");
     xmlhttp.send(JSON.stringify({off:off, color: color}));
+    requestSettings();
 }
