@@ -5,21 +5,25 @@ var colorcontrol = document.getElementById("color");
 var offcontrol = document.getElementById("off");
 
 window.onload=function(){
-    requestSettings();
+    requestSettings(setSettings());
 };
 
-function requestSettings(){
+function requestSettings(callback){
     console.log('requesting settings');
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange=function(){
         if(xhr.readyState===XMLHttpRequest.DONE){
             if(xhr.status===200){
                 var status = JSON.parse(xhr.responseText);
-                setSettings(status);
+                callback(status);
                 console.log('got settings, '+status);
             }
         }
     }
+
+    xhr.open("GET", path, true);
+    xhr.send();
+    return xhr.onreadystatechange();
 }
 
 function setSettings(resp){
