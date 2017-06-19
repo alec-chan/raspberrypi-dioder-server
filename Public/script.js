@@ -5,17 +5,17 @@ var colorcontrol = document.getElementById("color");
 var offcontrol = document.getElementById("off");
 
 window.onload=function(){
-    requestSettings(setSettings());
+    requestSettings();
 };
 
-function requestSettings(callback){
+function requestSettings(){
     console.log('requesting settings');
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange=function(){
         if(xhr.readyState===XMLHttpRequest.DONE){
             if(xhr.status===200){
                 var status = JSON.parse(xhr.responseText);
-                callback(status);
+                setSettings(status);
                 console.log('got settings, '+status);
             }
         }
