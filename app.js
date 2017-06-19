@@ -17,7 +17,10 @@ app.get('/', function(req, res) {
 app.get('/status', function(req, res){
     res.setHeader('Content-Type', 'application/json');
     var color=redoid.getColorHexValue();
-    res.send(JSON.stringify({ off: off, color: color}));
+    var status=JSON.stringify({ off: off, color: color});
+    console.log('sending status: '+status);
+    
+    res.send(status);
 });
 
 app.post('/submit', function(req, res) {
