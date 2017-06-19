@@ -1,6 +1,3 @@
-var color='#ffffff';
-var off=true;
-
 var colorcontrol = document.getElementById("color");
 var offcontrol = document.getElementById("off");
 
@@ -32,19 +29,11 @@ function setSettings(resp){
 }
 
 
-function update(jscolor) {
-    color='#' + jscolor;
-}
-
-function toggleOff(cb){
-    off=cb.checked;
-}
-
-
 function submit(){
+    console.log("submitting status: "+JSON.stringify({off:offcontrol.checked, color: colorcontrol.jscolor}));
     var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
     xmlhttp.open("POST", "/submit");
     xmlhttp.setRequestHeader("Content-Type", "application/json");
-    xmlhttp.send(JSON.stringify({off:off, color: color}));
+    xmlhttp.send();
     requestSettings();
 }

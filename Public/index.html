@@ -5,12 +5,10 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        Color: <input id="color" class="jscolor" onchange="update(this.jscolor)" value="ffffff">
+        Lights Off?:
+        <input id="off" type="checkbox" >
         <br/>
-        Off: 
-        
-        <input id="off" type="checkbox" onclick='toggleOff(this);' >
-    
+        Color: <input id="color" class="jscolor" onchange="update(this.jscolor)" value="ffffff">
         <br/>
         <button type="button" onclick="submit(); return false;">Send</button>
         <script src="script.js"></script>
