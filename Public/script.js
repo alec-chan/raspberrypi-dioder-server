@@ -41,10 +41,11 @@ function setSettings(resp){
 
 
 function submit(){
-    console.log("submitting status: "+JSON.stringify({off:offcontrol.checked, color: colorcontrol.jscolor}));
+    var status=JSON.stringify({off:offcontrol.checked, color: colorcontrol.jscolor});
+    console.log("submitting status: "+status);
     var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
     xmlhttp.open("POST", "/submit");
     xmlhttp.setRequestHeader("Content-Type", "application/json");
-    xmlhttp.send();
+    xmlhttp.send(status);
     requestSettings();
 }
