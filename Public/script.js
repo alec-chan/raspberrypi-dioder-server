@@ -21,7 +21,7 @@ function requestSettings(callback){
         }
     }
 
-    xhr.open("GET", path, true);
+    xhr.open("GET", "/status", true);
     xhr.send();
     return xhr.onreadystatechange();
 }
