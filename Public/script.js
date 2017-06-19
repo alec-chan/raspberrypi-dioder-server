@@ -13,7 +13,7 @@ function requestSettings(){
             if(xhr.status===200){
                 var status = JSON.parse(xhr.responseText);
                 setSettings(status);
-                console.log('got settings, '+status);
+                console.log('got settings, '+xhr.responseText);
             }
         }
     }

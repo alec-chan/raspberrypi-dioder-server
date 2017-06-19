@@ -10,7 +10,7 @@ var secretkey="aGVsbG8gd29ybGQ=";
 var off=false;
 app.use( express.static( __dirname + '/Public' ));
 app.use( bodyParser.json() );
-// viewed at http://localhost:8080
+// viewed at http://localhost:80
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + 'Public', 'index.html'));
 });
