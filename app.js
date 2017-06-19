@@ -16,7 +16,7 @@ app.get('/', function(req, res) {
 
 app.get('/status', function(req, res){
     res.setHeader('Content-Type', 'application/json');
-    var color=redoid.getColor();
+    var color=redoid.getColorHexValue();
     res.send(JSON.stringify({ off: off, color: color}));
 });
 
