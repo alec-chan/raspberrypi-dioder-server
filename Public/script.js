@@ -41,7 +41,7 @@ function setSettings(resp){
 
 
 function submit(){
-    var status=JSON.stringify({off:offcontrol.checked, color: colorcontrol.jscolor});
+    var status=JSON.stringify({off:offcontrol.checked, color: colorcontrol.jscolor.toHEXString()});
     console.log("submitting status: "+status);
     var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
     xmlhttp.open("POST", "/submit");
