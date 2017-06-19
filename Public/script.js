@@ -22,7 +22,9 @@ function requestSettings(){
     xhr.send();
     return xhr.onreadystatechange();
 }
-
+function togglecolor(val){
+    colorcontrol.disabled=val;
+}
 function setSettings(resp){
     colorcontrol.jscolor.fromString(resp.color);
     offcontrol.checked=resp.off;
