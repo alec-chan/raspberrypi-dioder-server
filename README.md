@@ -4,6 +4,15 @@
 ## Overview
 This project is mostly intended for personal use and is specifically tailored to my setup, but with very little modification, it is easy to personalize all the features you need.
 
+
+---
+
+<img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/700096-icon-61-warning-128.png" width="32"> 
+
+This project requires that you make (somewhat) irreversible changes to your IKEA Dioder light control unit and you also run the risk of accidentally permanently damaging your control unit.
+
+------
+
 ## Setup
 
 ### Required Materials:
@@ -14,7 +23,7 @@ This project is mostly intended for personal use and is specifically tailored to
 - Raspberry Pi w/internet connection (I used the Raspberry Pi 2, but any Pi with GPIO pins will work)
 
 ### Process:
-Diagram (source: [ffraenz/redoid](https://github.com/ffraenz/redoid))
+Wiring diagram (source: [ffraenz/redoid](https://github.com/ffraenz/redoid))
 [![Dioder control unit circuit board](https://cloud.githubusercontent.com/assets/1041468/20233401/7ad2ad82-a86f-11e6-8494-324e583f27c9.jpg)](https://cloud.githubusercontent.com/assets/1041468/20233401/7ad2ad82-a86f-11e6-8494-324e583f27c9.jpg)
 
 1. Open the plastic casing of the Dioder control unit to access the PCB
