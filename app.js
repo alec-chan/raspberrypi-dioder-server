@@ -46,7 +46,7 @@ app.post('/submit', function(req, res) {
     if(req.body){
         //if the auth is valid
         if(req.body.secretkey===secretkey){
-            console.log(req.body);
+            console.log("recieved request: "+req.body);
             //if we are requested to turn lights off
             if(req.body.off){
                 redoid.turnOff();
@@ -67,5 +67,7 @@ app.post('/submit', function(req, res) {
     }
 });
 
+
+console.log("Server started on port 80. Logging all API requests/responses...");
 //run off port 80 (http)
 app.listen(80);
