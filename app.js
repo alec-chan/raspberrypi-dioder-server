@@ -7,7 +7,9 @@ var Redoid = require('redoid');
 
 //initialize the lights with color white
 var redoid = Redoid({
-    color: '#ffffff'
+    color: '#ffffff',
+    //specific to my config
+    colorComponentPins: [4, 17, 23]
 });
 
 //some kind of a password system.  but this is a joke 
