@@ -1,4 +1,5 @@
-# Raspberry Pi Dioder Server
+# Raspberry Pi Dioder Server    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ## Overview
 This project is mostly intended for personal use and is specifically tailored to my setup, but with very little modification, it is easy to personalize all the features you need.
