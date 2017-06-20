@@ -48,7 +48,7 @@ app.post('/submit', function(req, res) {
     if(req.body){
         //if the auth is valid
         if(req.body.secretkey===secretkey){
-            console.log("recieved request: "+req.body);
+            console.log("recieved request: "+JSON.stringify(req.body));
             //if we are requested to turn lights off
             if(req.body.off){
                 redoid.turnOff();
